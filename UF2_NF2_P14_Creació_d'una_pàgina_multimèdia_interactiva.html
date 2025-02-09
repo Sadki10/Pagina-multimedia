@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pàgina multimèdia interactiva</title>
+    <link rel="stylesheet" href="paginaMultimedia.css">
+</head>
+<body>
+    <header>
+        <img src="media/img/gtaSanAndreas.png" alt="San Andreas Logo" width="50px">
+        <div class="divHeader">
+            <a href="#video">Vídeo</a>
+            <a href="#playlist">Playlist</a>
+            <a href="#gallery">Galeria</a>
+        </div>
+    </header>
+    <main>
+        <section id="video">
+            <h2>Vídeo</h2>
+            <video id="cjVideo" controls width="600">
+                <source src="media/video/cj.mp4" type="video/mp4">
+                <track src="media/video/cjSubtitles.vtt" kind="subtitles" srclang="ca" label="Català">
+                El teu navegador no admet vídeo HTML5.
+            </video>
+            <div id="videoControls">
+                <button class="button" onclick="playPause();">
+                    <img src="media/icon/playPauseIcon.svg" alt="reproduir/pausar" width="30px">
+                </button>
+                <button id="loopButton" class="button" onclick="toggleLoop();">
+                    <img src="media/icon/loopIcon.png" alt="en bucle" width="30px">
+                    <span class="status">Actiu</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="playlist">
+            <h2>Playlist</h2>
+            <audio id="audio" controls autoplay>
+                <source src="media/audio/ohShit.mp3" type="audio/mpeg">
+                <source src="media/audio/GTASanAndreas_Theme.mp3" type="audio/mpeg">
+                El teu navegador no admet àudio HTML5.
+            </audio>
+        </section>
+        <section id="gallery">
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <img src="media/img/olaKeriSerMiAmor.jpg" alt="CJ amb un ram de flors dient 'Ola keri ser el amor de mi vida'">
+                <img src="media/img/triVago.jpg" alt="Imatge on apareixen membres de Los Vagos amb els següents texts: 'One Vago' 'Two Vago' 'Trivago'">
+                <img src="media/img/CJ.jpg" alt="Imatge de CJ">
+                <img src="media/img/kienKiereSerMiAmigoCJ.jpeg" alt="CJ amb un passamuntanyes: 'kien quiere ser mi amigo? esqe nomás tengo como cero'">
+                <img src="media/img/plataOPlomo.jpg" alt="CJ apuntant amb dos armes: 'La bala o el pito, tu decides que entra'">
+                <div class="zoomButtons">
+                    <div id="zoom-in" class="button">
+                        Zoom-In
+                    </div>
+                    <div id="zoom-out" class="button">
+                        Zoom-Out
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2004 Rockstar Games</p>
+        <p>Grand Theft Auto: San Andreas</p>
+    </footer>
+  
+<script src="paginaMultimedia.js"></script>
+</body>
+</html>
