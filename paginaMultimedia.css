@@ -118,7 +118,6 @@ video::cue {
     z-index: 1;
   }
   
-  /* Show the tooltip text when you mouse over the tooltip container */
   #loopButton:hover .status {
     visibility: visible;
   }
